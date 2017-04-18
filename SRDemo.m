@@ -249,6 +249,7 @@ set(handles.rbRobust, 'enable', 'on');
 guidata(hObject, handles);
 
 
+%% 
 function [props, resFactor, D, LR, Hpsf] = CollectParms(hObject, handles)
 
 try
@@ -282,16 +283,12 @@ try
         
     end
     
-    
-catch
-    
+catch    
     err = lasterror;
     errordlg(err.message,'Parsing error');
 end
 
-
-
-
+%% 
 function txtResFactor_Callback(hObject, eventdata, handles)
 % hObject    handle to txtResFactor (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
@@ -315,6 +312,7 @@ end
 
 
 
+%%
 function txtPsfSize_Callback(hObject, eventdata, handles)
 % hObject    handle to txtPsfSize (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
@@ -324,7 +322,10 @@ function txtPsfSize_Callback(hObject, eventdata, handles)
 %        str2double(get(hObject,'String')) returns contents of txtPsfSize as a double
 
 
+
+%% 
 % --- Executes during object creation, after setting all properties.
+
 function txtPsfSize_CreateFcn(hObject, eventdata, handles)
 % hObject    handle to txtPsfSize (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
