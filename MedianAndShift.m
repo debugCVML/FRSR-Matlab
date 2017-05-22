@@ -54,7 +54,7 @@ for x=Dres:2*Dres-1
   end
 end
 
-% Find under-determined shifts
+% Find under-determined shifts.
 [X,Y] = find(S==0);
 % 
 if ~isempty(X)

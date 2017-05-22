@@ -277,12 +277,14 @@ try
     LR = handles.LR;
     [X,Y]=meshgrid(1:size(LR, 2), 1:size(LR, 1));
     
+    testLR = LR;
+
     for i=1:size(LR, 3)
         
         LR(:,:,i)=interp2(X+Dr(i,1), Y+Dr(i,2), LR(:,:,i), X, Y, '*nearest');
         
     end
-    
+dummy = 1;
 catch    
     err = lasterror;
     errordlg(err.message,'Parsing error');
